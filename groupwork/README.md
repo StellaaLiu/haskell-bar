@@ -2,7 +2,7 @@
 
 > 一名测试工程师走进了一个酒吧......
 
-## How to Build This Project
+## Build This Project
 
 copying code:
 ```
