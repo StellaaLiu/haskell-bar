@@ -22,7 +22,14 @@ stack init
 ## Menu
 
 - app/Main.hs: create and initialise an sqlite database, download data and save to database, run queries on the database.
-- app/Types.hs: defines the Haskell data types you are using
-- app/Fetch.hs: defines a function for downloading the document
-- app/Parse.hs: parses the downloaded data into the given Haskell datatype
-- app/Database.hs: creates DB tables, saves/retrieves data from/to a database using again the appropriate Haskell data types
+- src/Types.hs: defines the Haskell data types you are using
+- src/Fetch.hs: defines a function for downloading the document
+- src/Parse.hs: parses the downloaded data into the given Haskell datatype
+- src/Database.hs: creates DB tables, saves/retrieves data from/to a database using again the appropriate Haskell data types
+
+## Use Haddock
+
+```
+haddock [option ...] file ...
+```
+See [Haddock Documentation](https://haskell-haddock.readthedocs.io/en/latest/invoking.html)
