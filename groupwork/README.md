@@ -33,3 +33,5 @@ stack init
 haddock [option ...] file ...
 ```
 See [Haddock Documentation](https://haskell-haddock.readthedocs.io/en/latest/invoking.html)
+
+TODO: I am not sure whether it works
