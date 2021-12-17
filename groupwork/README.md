@@ -1,8 +1,10 @@
 # groupwork
 
+他妈的太坐牢了我明天再坐
+
 > 一名测试工程师走进了一个酒吧......
 
-## Build This Project
+## How to Build This Project
 
 copying code:
 ```
@@ -33,5 +35,3 @@ stack init
 haddock [option ...] file ...
 ```
 See [Haddock Documentation](https://haskell-haddock.readthedocs.io/en/latest/invoking.html)
-
-TODO: I am not sure whether it works
