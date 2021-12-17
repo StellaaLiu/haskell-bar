@@ -1,6 +1,6 @@
 # groupwork
 
-## How to Build This Project
+## Build This Project
 
 copying code:
 ```
