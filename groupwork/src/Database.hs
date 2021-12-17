@@ -69,4 +69,10 @@ initialiseDB = do
             \)"
         return conn
 
+createRecord :: Connection -> Overall -> IO ()
+createRecord conn overall_record = 
+    execute conn "INSERT INTO overall VALUES (?,?,?,?,?,?,?,?,?)" overall_record
+
+saveRecords :: Connection -> [Overall] -> IO ()
+saveRecords conn = mapM_ (createRecord conn)
 
