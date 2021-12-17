@@ -7,6 +7,7 @@ module Parse (
   parseRecords
 ) where
 
+import Fetch
 import Types
 import Data.Aeson
 import qualified Data.ByteString.Lazy.Char8 as L8
@@ -73,4 +74,14 @@ instance ToJSON SpecByType where
                , "average_wn8" .= average_wn8__
                ]
 
-parseRecords :: L8.ByteString -> Either String Records
+parseRecords :: L8.ByteString -> Either String [Overall]
+    tags <- parseTags <$> download "https://wotlabs.net/na/tankStats"
+        let overall_record = map f $ sections (~== "<tbody>") $
+                             takeWhile (~/= "<td>") $
+                             drop 5 $ dropWhile (~/= "</td>") 
+        ToJSON $ unlines overall_record
+    where
+        f :: [Tag String] -> String
+        f = dequote . unwords . words . fromTagText . head . filter isTagText
+        dequote ('\"':xs) | last xs == '\"' = init xs
+        dequote x = x
