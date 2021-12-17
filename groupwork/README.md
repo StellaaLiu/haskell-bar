@@ -1,9 +1,5 @@
 # groupwork
 
-他妈的太坐牢了我明天再坐
-
-> 一名测试工程师走进了一个酒吧......
-
 ## How to Build This Project
 
 copying code:
